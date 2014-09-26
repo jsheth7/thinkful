@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>EC9F0FA6-33DD-47DD-B5E6-E1880A19C4F7</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Unit2Lesson3</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>39AD5C8E9FB256B379A26285328DA9DCA95D5FA0</key>
+		<string>https://github.com/jsheth7/thinkful.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>lesson2/Unit 2, Lesson 3/Unit2Lesson3/Unit2Lesson3.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>39AD5C8E9FB256B379A26285328DA9DCA95D5FA0</key>
+		<string>../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/jsheth7/thinkful.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>39AD5C8E9FB256B379A26285328DA9DCA95D5FA0</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>39AD5C8E9FB256B379A26285328DA9DCA95D5FA0</string>
+			<key>IDESourceControlWCCName</key>
+			<string>thinkful</string>
+		</dict>
+	</array>
+</dict>
+</plist>
