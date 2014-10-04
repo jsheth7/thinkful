@@ -52,7 +52,7 @@ class FibonacciSequence {
         
         var index = 2
         
-        for(index = 2; index < numberOfItemsInSequence + 1; index++){
+        for(index = 2; index < numberOfItemsInSequence; index++){
             var nextNumber = self.values[index - 1] + self.values[index - 2]
             self.values.append(nextNumber)
         }
@@ -61,4 +61,4 @@ class FibonacciSequence {
 
 let fibanocciSequence = FibonacciSequence(maxNumber:100, includesZero: true)
 
-let anotherSequence = FibonacciSequence(numberOfItemsInSequence: 10, includesZero: true)
+let anotherSequence = FibonacciSequence(numberOfItemsInSequence: 3, includesZero: true)
