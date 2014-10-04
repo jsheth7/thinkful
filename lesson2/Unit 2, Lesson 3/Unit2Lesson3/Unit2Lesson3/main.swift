@@ -45,10 +45,20 @@ class HybridCar: Car {
     
     var electricHorsepower: Float = 0.0
     
+    override var name : String {
+        get{
+            super.name = "Hybrid"
+            return super.name + "Tech"
+        }
+        
+        set
+        {
+            //Nothing here for now.
+        }
+    }
     
     override func setupCarDetailsWithName(nameOfCar: String, colorOfCar: String, horsepowerOfCar: Int, automaticOptionOfCar: Bool){
         
-        self.name = nameOfCar
         self.color = colorOfCar
         self.automaticOption = (automaticOptionOfCar ? "Automatic" : "Manual")
         
@@ -57,6 +67,31 @@ class HybridCar: Car {
         println("My \(name) is \(color) and has \(electricHorsepower) Electric horsepower (bhp) and is \(automaticOption)")
     }
 }
+
+
+class PickupTruck: Car {
+    
+    var cargoBedWidth = 0.0
+    var cargoBedLength = 0.0
+    
+    //Is the totalCargoArea a square?
+    var totalCargoArea : Double {
+        
+        get {
+            
+            return cargoBedWidth * cargoBedLength
+        }// Closes the getter declaration
+        
+        
+        set {
+            //Can newValue be called anything ?
+            cargoBedLength = sqrt(newValue)
+            cargoBedWidth = cargoBedLength
+        } // Closes the setter declaration
+        
+    } //Closes the variable declaration
+    
+} //Closes the class declaration
 
 //This is the first category of cars
 var myRegularCar = Car()
@@ -71,6 +106,24 @@ println(myTurboCar.turboCarSpecs("B", aSpoiler: true))
 var myHybridCar = HybridCar()
 println()
 myHybridCar.setupCarDetailsWithName("Hybrid Car", colorOfCar: "Yellow", horsepowerOfCar: 100, automaticOptionOfCar: true)
+
+//This is the fourth category of cars: a Pickup Truck
+var myPickupTruck = PickupTruck()
+
+//Scenario 1  - Use the setter to work back to calculate the length and width
+myPickupTruck.totalCargoArea = 3000.0
+
+println()
+//This is assuming that we're dealing with a square here:
+println("The Truck's cargo bed length is: \(myPickupTruck.cargoBedLength) and the cargo bed width is \(myPickupTruck.cargoBedWidth) and the total cargo area is \(myPickupTruck.totalCargoArea)")
+
+//Scenario 2  - Set the length and width of cargo area and use only the getter to calculate the area
+myPickupTruck.cargoBedLength = 50
+myPickupTruck.cargoBedWidth = 60
+
+println()
+println("The Truck's cargo bed length is: \(myPickupTruck.cargoBedLength) and the cargo bed width is \(myPickupTruck.cargoBedWidth) and the total cargo area is \(myPickupTruck.totalCargoArea)")
+
 
 
 
