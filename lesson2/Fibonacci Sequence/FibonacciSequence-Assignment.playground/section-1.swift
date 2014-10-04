@@ -42,6 +42,10 @@ class FibonacciSequence {
         self.includesZero = includesZero
         //TODO: Create an array which contains the numbers in the Fibonacci sequence, and the array should contain this many items: numberOfItemsInSequence. For example, if numberOfItemsInSequence is 10 then the array should contain [0,1,1,2,3,5,8,13,21,34] if inlcudesZero is true, or [1,1,2,3,5,8,13,21,34,55] if includesZero is false.
         
+        if(numberOfItemsInSequence == 0){
+            self.values = []
+            return
+        }
         
         if(includesZero == true){
             self.values = [0, 1]
@@ -50,15 +54,21 @@ class FibonacciSequence {
             self.values = [1, 1]
         }
         
-        var index = 2
+        if(numberOfItemsInSequence == 1){
+                self.values.removeAtIndex(1)
+            
+        }
+        else{
+            var index = 2
         
-        for(index = 2; index < numberOfItemsInSequence; index++){
-            var nextNumber = self.values[index - 1] + self.values[index - 2]
-            self.values.append(nextNumber)
+            for(index = 2; index < numberOfItemsInSequence; index++){
+                var nextNumber = self.values[index - 1] + self.values[index - 2]
+                self.values.append(nextNumber)
+            }
         }
     }
 }
 
 let fibanocciSequence = FibonacciSequence(maxNumber:100, includesZero: true)
 
-let anotherSequence = FibonacciSequence(numberOfItemsInSequence: 3, includesZero: true)
+let anotherSequence = FibonacciSequence(numberOfItemsInSequence: 3, includesZero: false)
