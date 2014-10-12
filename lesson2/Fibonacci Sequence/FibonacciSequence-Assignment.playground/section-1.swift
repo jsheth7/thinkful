@@ -15,6 +15,11 @@ class FibonacciSequence {
     init(maxNumber: Int, includesZero: Bool) {
         self.includesZero = includesZero
         
+        if(maxNumber == 0){
+            self.values = []
+            return
+        }
+        
         if(includesZero == true){
             self.values = [0, 1]
         }
@@ -56,7 +61,6 @@ class FibonacciSequence {
         
         if(numberOfItemsInSequence == 1){
                 self.values.removeAtIndex(1)
-            
         }
         else{
             var index = 2
